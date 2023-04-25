@@ -26,12 +26,12 @@ func ProcessString(s string) string {
 
 	for _, letras := range s {
 		if strings.ContainsAny(string(letras), "AEIOUaeiou") {
-			
+
 		}
-		if strings.ContainsAny(string(letras), "bcdfghjklmnpqrstvwxyzBCDFGHKLMNPQRSTVWXYZ") {
+		if strings.ContainsAny(string(letras), "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ") {
 			s2 += "." + strings.ToLower(string(letras))
 		}
 	}
-	
+
 	return s2
 }
