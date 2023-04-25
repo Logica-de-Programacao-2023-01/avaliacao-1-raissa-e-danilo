@@ -27,17 +27,16 @@ func ProcessString(s string) string {
 
 	for _, letra := range vogais {
 		s = strings.ReplaceAll(s, letra, "")
-		
+
 	}
 
 	for _, letra := range consoantes {
 		s = strings.ReplaceAll(s, strings.ToLower(letra), "."+strings.ToLower(letra))
 	}
-	
+
 	for _, letra := range consoantes {
 		s = strings.ReplaceAll(s, letra, "."+strings.ToLower(letra))
 	}
 	return s
 	
-	return ""
 }
