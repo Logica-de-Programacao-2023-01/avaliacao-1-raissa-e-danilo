@@ -14,7 +14,24 @@ package q5
 //
 //Ajude Pedro a lidar com esta tarefa fácil.
 
+
+
+
+import (
+	"strings"
+)
+
 func ProcessString(s string) string {
-	// Seu código aqui
-	return ""
+	s2 := ""
+
+	for _, letras := range s {
+		if strings.ContainsAny(string(letras), "AEIOUaeiou") {
+
+		}
+		if strings.ContainsAny(string(letras), "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ") {
+			s2 += "." + strings.ToLower(string(letras))
+		}
+	}
+
+	return s2
 }
