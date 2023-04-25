@@ -15,7 +15,7 @@ import (
 
 func ClassifyPrices(prices []int) (int, error) {
 	if len(prices) == 0 {
-		return 0, fmt.Errorf("erro")
+		return 0, fmt.Errorf("valor inválido")
 	}
 	if len(prices) == 1 {
 		return 3, nil
