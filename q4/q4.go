@@ -9,6 +9,11 @@ package q4
 //estiver em ordem decrescente e 3 se a lista estiver aleatória. A função deve retornar um erro se a lista estiver vazia.
 //Caso a lista possua apenas um elemento, a função deve retornar 3.
 
+
+import (
+	"fmt"
+)
+
 func ClassifyPrices(prices []int) (int, error) {
 	if len(prices) == 0 {
 		return 0, fmt.Errorf("valor inválido")
