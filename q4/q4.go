@@ -31,9 +31,9 @@ func ClassifyPrices(prices []int) (int, error) {
 	if contador2 != 0 && contador1 == 0 {
 		return 2, nil
 	} else if contador1 != 0 && contador2 == 0 {
-		return 1, nil
-	} else if contador2 != 0 && contador1 != 0 {
 		return 3, nil
+	} else if contador2 != 0 && contador1 != 0 {
+		return 1, nil
 	}
 	return 3, nil
 
