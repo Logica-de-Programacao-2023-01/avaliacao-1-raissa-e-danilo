@@ -10,10 +10,6 @@ package q4
 //Caso a lista possua apenas um elemento, a função deve retornar 3.
 
 
-import (
-	"fmt"
-)
-
 func ClassifyPrices(prices []int) (int, error) {
 	if len(prices) == 0 {
 		return 0, fmt.Errorf("valor inválido")
@@ -31,10 +27,10 @@ func ClassifyPrices(prices []int) (int, error) {
 	if contador2 != 0 && contador1 == 0 {
 		return 2, nil
 	} else if contador1 != 0 && contador2 == 0 {
-		return 3, nil
-	} else if contador2 != 0 && contador1 != 0 {
 		return 1, nil
+	} else if contador2 != 0 && contador1 != 0 {
+		return 3, nil
 	}
-	return 0, nil
+	return 3, nil
 
 }
