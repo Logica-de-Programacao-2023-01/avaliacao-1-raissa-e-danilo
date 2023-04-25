@@ -25,6 +25,8 @@ func ClassifyPrices(prices []int) (int, error) {
 	for i := 0; i < len(prices)-1; i++ {
 		if prices[i] > prices[i+1] {
 			contador2++
+		} else if prices[i] < prices [i+1] {
+			contador1++
 		}
 	}
 	if contador2 != 0 && contador1 == 0 {
@@ -34,6 +36,6 @@ func ClassifyPrices(prices []int) (int, error) {
 	} else if contador2 != 0 && contador1 != 0 {
 		return 3, nil
 	}
-	return 0, nil
+	return 3, nil
 
 }
