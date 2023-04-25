@@ -18,13 +18,13 @@ import (
 )
 
 func DominoPieces(m, n int) (int, error) {
-	if m <= 0 && n <= 0 {
+	if m <= 0 || n <= 0 {
 		return 0, fmt.Errorf("valor inválido")
 	}
-	
-	areaTotal := m * n
-	pecas := areaTotal / 2
+
+	area := m * n
+	pecas := area / 2
 	return pecas, nil
-	
+
 	return 0, nil
 }
