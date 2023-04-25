@@ -35,6 +35,6 @@ func ClassifyPrices(prices []int) (int, error) {
 	} else if contador2 != 0 && contador1 != 0 {
 		return 1, nil
 	}
-	return 3, nil
+	return 0, nil
 
 }
