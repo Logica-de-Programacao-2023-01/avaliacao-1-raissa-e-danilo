@@ -10,6 +10,26 @@ package q4
 //Caso a lista possua apenas um elemento, a função deve retornar 3.
 
 func ClassifyPrices(prices []int) (int, error) {
-	// Seu código aqui
-	return 0, nil
+	if len(prices) == 0 {
+		return 0, fmt.Errorf("valor inválido")
+	}
+	if len(prices) == 1 {
+		return 3, nil
+	}
+	contador1 := 0
+	contador2 := 0
+	for i := 0; i < len(prices)-1; i++ {
+		if prices[i] > prices[i+1] {
+			contador2++
+		}
+	}
+	if contador2 != 0 && contador1 == 0 {
+		return 2, nil
+	} else if contador1 != 0 && contador2 == 0 {
+		return 1, nil
+	} else if contador2 != 0 && contador1 != 0 {
+		return 3, nil
+	}
+	return 3, nil
+
 }
