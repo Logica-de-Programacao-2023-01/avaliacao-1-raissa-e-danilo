@@ -17,11 +17,14 @@ func ClassifyPrices(prices []int) (int, error) {
 	if len(prices) == 0 {
 		return 0, fmt.Errorf("valor inválido")
 	}
+	
+	contador1 := 0
+	contador2 := 0
+		
 	if len(prices) == 1 {
 		return 3, nil
 	}
-	contador1 := 0
-	contador2 := 0
+
 	for i := 0; i < len(prices)-1; i++ {
 		if prices[i] > prices[i+1] {
 			contador2++
