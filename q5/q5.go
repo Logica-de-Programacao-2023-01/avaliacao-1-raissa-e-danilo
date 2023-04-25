@@ -22,21 +22,16 @@ import (
 )
 
 func ProcessString(s string) string {
-	vogais := []string{"A", "E", "I", "O", "U", "a", "e", "i", "o", "u"}
-	consoantes := []string{"B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z", "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"}
+	s2 := ""
 
-	for _, letra := range vogais {
-		s = strings.ReplaceAll(s, letra, "")
-
+	for _, letras := range s {
+		if strings.ContainsAny(string(letras), "AEIOUaeiou") {
+			
+		}
+		if strings.ContainsAny(string(letras), "bcdfghjklmnpqrstvwxyzBCDFGHKLMNPQRSTVWXYZ") {
+			s2 += "." + strings.ToLower(string(letras))
+		}
 	}
-
-	for _, letra := range consoantes {
-		s = strings.ReplaceAll(s, strings.ToLower(letra), "."+strings.ToLower(letra))
-	}
-
-	for _, letra := range consoantes {
-		s = strings.ReplaceAll(s, letra, "."+strings.ToLower(letra))
-	}
-	return s
 	
+	return s2
 }
